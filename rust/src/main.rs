@@ -15,7 +15,7 @@ fn main() {
 // Function to get the current time since epoch in milliseconds
 fn get_start_time() -> u128 {
     return std::time::SystemTime::now()
-        .duration_since(std::time::UNIX_EPOCH).unwrap().as_millis();
+        .duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos();
 }
 
 // While Loop

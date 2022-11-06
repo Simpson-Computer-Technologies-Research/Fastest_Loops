@@ -16,23 +16,36 @@ What are the Fastest loops between Python, Rust, Golang?
 <h3>Golang</h3>
 
 ```py
- >> While Loop: 2.3914ms
+ >> While Loop:     2.3914ms
 
- >> Counted Loop: 1.9946ms
+ >> Counted Loop:   1.9946ms
 
- >> Range Loop: 1.9947ms
+ >> Range Loop:     1.9947ms
 ```
 
-<h3>Rust</h3>
+<h3>Rust (with --release)</h3>
 
 ```py
- >> While Loop: 48ms
+ # // ns (nanosecond) is 1 Millisecond / 1,000,000
+ >> While Loop:         0ns
 
- >> Counted For Loop: 124ms
+ >> Counted For Loop:   0ns
 
- >> For Loop: 173ms
+ >> For Loop:           0ns
 
- >> Iter Loop: 194ms
+ >> Iter Loop:          0ns
+```
+
+<h3>Rust (not with --release)</h3>
+
+```py
+ >> While Loop:         48ms
+
+ >> Counted For Loop:   124ms
+
+ >> For Loop:           173ms
+
+ >> Iter Loop:          194ms
 ```
 
 # Functions
