@@ -1,4 +1,4 @@
-# Fastest Loops ![Stars](https://img.shields.io/github/stars/Simpson-Computer-Technologies-ResearchFastest_Loops?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/Simpson-Computer-Technologies-Research/Fastest_Loops?label=Watchers)
+# Fastest Loops ![Stars](https://img.shields.io/github/stars/Simpson-Computer-Technologies-Research/Fastest_Loops?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/Simpson-Computer-Technologies-Research/Fastest_Loops?label=Watchers)
 ![banner](https://user-images.githubusercontent.com/75189508/200192635-8b052e64-585b-4b15-bacb-b1457cd500ab.png)
 What are the Fastest loops between Python, Rust, Golang?
 
