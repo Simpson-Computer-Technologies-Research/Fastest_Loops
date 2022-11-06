@@ -27,6 +27,7 @@ What are the Fastest loops between Python, Rust, Golang?
 
 ```py
  # // ns (nanosecond) is 1 Millisecond / 1,000,000
+ 
  >> While Loop:         0ns
 
  >> Counted For Loop:   0ns
