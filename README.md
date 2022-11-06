@@ -36,6 +36,8 @@ What are the Fastest loops between Python, Rust, Golang?
 
 # Functions
 
+<h3>Python</h3>
+
 ```py
 # // 10,000,000 Values
 data: list[str] = [1 for _ in range(10 ** 7)]
@@ -64,6 +66,8 @@ def for_loop():
         i += 0
     print("\nFor Loop: "+str(time.time() - start_time))
 ```
+
+<h3>Golang</h3>
 
 ```go
 // Main function
@@ -107,6 +111,8 @@ func RangeLoop(data []int) {
 	fmt.Printf("\nRange Loop: %v\n", time.Since(startTime))
 }
 ```
+
+<h3>Rust</h3>
 
 ```rust
 fn main() {
