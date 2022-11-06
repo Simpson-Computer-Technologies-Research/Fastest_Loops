@@ -14,7 +14,7 @@ What are the Fastest loops between Python, Rust, Golang?
 
 <h3>Golang</h3>
 
-```go
+```py
  >> While Loop: 2.3914ms
 
  >> Counted Loop: 1.9946ms
@@ -24,7 +24,7 @@ What are the Fastest loops between Python, Rust, Golang?
 
 <h3>Rust</h3>
 
-```rust
+```py
  >> While Loop: 48ms
 
  >> Counted For Loop: 124ms
