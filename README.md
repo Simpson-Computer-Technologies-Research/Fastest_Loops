@@ -33,3 +33,139 @@ What are the Fastest loops between Python, Rust, Golang?
 
  >> Iter Loop: 194ms
 ```
+
+# Functions
+
+```py
+# // 10,000,000 Values
+data: list[str] = [1 for _ in range(10 ** 7)]
+
+# // While Loop
+def while_loop():
+    start_time: int = time.time()
+    i: int = 0
+    while i < len(data):
+        i += 1
+    print("\nWhile Loop: "+str(time.time() - start_time))
+
+
+# // Counted loop
+def counted_for_loop():
+    start_time: int = time.time()
+    for i in range(len(data)):
+        i += 0
+    print("\nCounted For Loop: "+str(time.time() - start_time))
+
+
+# // Variable Loop
+def for_loop():
+    start_time: int = time.time()
+    for i in data:
+        i += 0
+    print("\nFor Loop: "+str(time.time() - start_time))
+```
+
+```go
+// Main function
+func main() {
+	var data []int = []int{}
+	for i := 0; i < 10_000_000; i++ {
+		data = append(data, i)
+	}
+	WhileLoop(data)
+	CountedLoop(data)
+	RangeLoop(data)
+}
+
+// WhileLoop
+func WhileLoop(data []int) {
+	var (
+		startTime time.Time = time.Now()
+		i         int       = 0
+	)
+	for i < len(data) {
+		i++
+	}
+	fmt.Printf("\nWhile Loop: %v\n", time.Since(startTime))
+}
+
+// Counted Loop
+func CountedLoop(data []int) {
+	var startTime time.Time = time.Now()
+	for i := 0; i < len(data); i++ {
+		i += 0
+	}
+	fmt.Printf("\nCounted Loop: %v\n", time.Since(startTime))
+}
+
+// Range Loop
+func RangeLoop(data []int) {
+	var startTime time.Time = time.Now()
+	for _, v := range data {
+		v += 0
+	}
+	fmt.Printf("\nRange Loop: %v\n", time.Since(startTime))
+}
+```
+
+```rust
+fn main() {
+    // Create the array and fill it with numbers
+    let mut data: Vec<i64> = vec![];
+    for i in 0..10_000_000 {
+        data.push(i as i64)
+    }
+
+    // Call the functions
+    while_loop(&data);
+    counted_loop(&data);
+    for_loop(&data);
+    iter_loop(&data);
+}
+
+// Function to get the current time since epoch in milliseconds
+fn get_start_time() -> u128 {
+    return std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH).unwrap().as_millis();
+}
+
+// While Loop
+fn while_loop(data: &[i64]) {
+    let start_time: u128 = get_start_time();
+    let mut i: i64 = 0;
+    while i < data.len().try_into().unwrap() {
+        i += 1;
+    }
+    println!("While Loop: {}ms", get_start_time() - start_time);
+}
+
+// Counted For Loop 
+fn counted_loop(data: &[i64]) {
+    let start_time: u128 = get_start_time();
+    let mut i: i64 = 0;
+    for _ in 1..data.len() {
+        i += 1;
+    }
+    println!("Counted For Loop: {}ms", get_start_time() - start_time);
+}
+
+// For Loop
+fn for_loop(data: &[i64]) {
+    let start_time: u128 = get_start_time();
+    let mut i: i64 = 0;
+    for _ in data {
+        i += 1;
+    }
+    println!("For Loop: {}ms", get_start_time() - start_time);
+}
+
+// Loop using Iter and ForEach
+fn iter_loop(data: &[i64]) {
+    let start_time: u128 = get_start_time();
+    let mut i: i64 = 0;
+    data.iter().for_each(|_| {
+        i += 1;
+    });
+    println!("Iter Loop: {}ms", get_start_time() - start_time);
+}
+```
